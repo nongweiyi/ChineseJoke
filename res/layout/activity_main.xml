@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity" 
+    >
+
+    <com.example.chinesejoke.customView.SideslipView
+        android:id="@+id/sideslipView_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- 菜单相关 -->
+
+        <LinearLayout
+            android:id="@+id/menu_id"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" 
+            >
+            <ListView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/menu_listview_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+        </LinearLayout>
+
+        <!-- 笑话展示 -->
+
+        <LinearLayout
+            android:id="@+id/jokeShow_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DDDDDD"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/titlebar_background"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="中国笑话"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btn_refresh_id"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/titlebar_button_refresh" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <ListView
+                    android:id="@+id/listview_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </ListView>
+
+                <LinearLayout
+                    android:id="@+id/loadingHint_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal" >
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:progressDrawable="@android:color/holo_orange_dark" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="正在加载，请稍后"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/loadmore_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="加载更多" />
+        </LinearLayout>
+    </com.example.chinesejoke.customView.SideslipView>
+
+</LinearLayout>

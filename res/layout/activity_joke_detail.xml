@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".JokeDetailActivity" 
+    android:background="#DDDDDD">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/titlebar_background"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/btn_previous_id"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/jokedetails_titlebar_btn_previous" />
+         <TextView
+             android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中国笑话"/>
+        
+
+        <Button
+            android:id="@+id/btn_next_id"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/jokedetails_titlebar_btn_next"
+            />
+    </RelativeLayout>
+
+    <ViewFlipper
+        android:id="@+id/viewflipper_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ViewFlipper>
+
+</LinearLayout>
